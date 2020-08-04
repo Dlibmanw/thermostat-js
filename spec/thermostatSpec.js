@@ -4,7 +4,11 @@ describe('Thermostat', function() {
         thermostat = new Thermostat();
     });
 
-    it('start at 20 degrees', function(){
+    it('starts at 20 degrees', function(){
         expect(thermostat.getCurrentTemperature()).toEqual(20);
-    })
+    });
+
+    it('increases the temperature with up()', function(){
+        expect(thermostat.up()).toEqual(21);
+    });
 });
