@@ -18,10 +18,14 @@ describe('Thermostat', function() {
         expect(thermostat.getCurrentTemperature()).toEqual(19);
     });
 
-    it('it has a minimum of 10 degrees', function(){
+    it('has a minimum of 10 degrees', function(){
         for(var i = 0; i < 11; i++) {
             thermostat.down();
         }
         expect(thermostat.getCurrentTemperature()).toEqual(10)
+    });
+
+    it('has a power saving mode which is activated by default', function(){
+        expect(thermostat.showPowerSaveMode()).toEqual('on')
     });
 });
