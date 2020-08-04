@@ -7,5 +7,5 @@ Thermostat.prototype.getCurrentTemperature = function() {
 };
 
 Thermostat.prototype.up = function() {
-    return this.temperature += 1;
+    this.temperature += 1;
 }

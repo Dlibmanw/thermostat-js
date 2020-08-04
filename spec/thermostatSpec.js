@@ -9,6 +9,7 @@ describe('Thermostat', function() {
     });
 
     it('increases the temperature with up()', function(){
-        expect(thermostat.up()).toEqual(21);
+        thermostat.up()
+        expect(thermostat.getCurrentTemperature()).toEqual(21);
     });
 });
