@@ -31,6 +31,11 @@ describe('Thermostat', function() {
 
     it('has a function that can switch off the powerSaveMode', function(){
         thermostat.switchPowerSaveModeOff();
-        expect(thermostat.powerSaveMode).toEqual('off')
+        expect(thermostat.showPowerSaveMode()).toEqual('off')
+    });
+
+    it('has a function that can switch on the powerSaveMode', function(){
+        thermostat.switchPowerSaveModeOn();
+        expect(thermostat.showPowerSaveMode()).toEqual('on')
     });
 });
