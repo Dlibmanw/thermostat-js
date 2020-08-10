@@ -38,7 +38,7 @@ Thermostat.prototype.switchPowerSaveModeOff = function() {
     this.powerSaveMode = 'off';
 }
 
-Thermostat.prototype.switchPowerSaveModeOn = function () {
+Thermostat.prototype.switchPowerSaveModeOn = function() {
     this.powerSaveMode = 'on'
 }
 
@@ -50,4 +50,7 @@ Thermostat.prototype.isMaximumTemperature = function() {
     }
 }
 
+Thermostat.prototype.resetTemperature = function() {
+    this.temperature = 20;
+}
 
