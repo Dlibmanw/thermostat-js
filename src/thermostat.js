@@ -1,5 +1,6 @@
 function Thermostat() {
-    this.temperature = 20;
+    this.DEFAULT_TEMPERATURE = 20;
+    this.temperature = this.DEFAULT_TEMPERATURE;
     this.MINIMUM_TEMP = 10;
     this.MAX_TEMP_PSM_ON = 25;
     this.MAX_TEMP_PSM_OFF = 32;
@@ -51,6 +52,6 @@ Thermostat.prototype.isMaximumTemperature = function() {
 }
 
 Thermostat.prototype.resetTemperature = function() {
-    this.temperature = 20;
+    this.temperature = this.DEFAULT_TEMPERATURE;
 }
 
