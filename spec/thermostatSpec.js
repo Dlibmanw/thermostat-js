@@ -67,4 +67,30 @@ describe('Thermostat', function() {
         thermostat.resetTemperature()
         expect(thermostat.getCurrentTemperature()).toEqual(20)
     });
+
+    describe('display the different usage levels', function(){
+        describe('when the temperture is lower than 18 degrees', function(){
+            it('displayes a low-usage message', function(){
+                for ( var i = 0; i < 3; i++){
+                    thermostat.down();
+                }
+                expect(thermostat.showEnergyUsage()).toEqual('low-usage')
+            })
+        })
+
+        describe('when the temperture is between 18-25 degrees', function(){
+            it('displayes a medium-usage message', function(){
+                expect(thermostat.showEnergyUsage()).toEqual('medium-usage')
+            })
+        })
+
+        describe('when the temperture is anything else', function(){
+            it('displayes a high-usage message', function(){
+                for ( var i = 0; i < 6; i++){
+                    thermostat.up();
+                }
+                expect(thermostat.showEnergyUsage()).toEqual('high-usage')
+            })
+        })
+    })
 });
