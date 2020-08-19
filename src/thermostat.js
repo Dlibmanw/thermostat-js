@@ -60,7 +60,7 @@ Thermostat.prototype.showEnergyUsage = function() {
      if (this.temperature < this.MEDIUM_ENERGY_USAGE_LIMIT) {
          return 'low-usage'
      } 
-     if (this.temperature > this.MEDIUM_ENERGY_USAGE_LIMIT && this.temperature < this.MAX_TEMP_PSM_ON) {
+     if (this.temperature >= this.MEDIUM_ENERGY_USAGE_LIMIT && this.temperature < this.MAX_TEMP_PSM_ON) {
          return 'medium-usage'
      }
     return 'high-usage'
