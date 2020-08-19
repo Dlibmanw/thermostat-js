@@ -10,6 +10,11 @@ $(document).ready(function(){
         updateTemperature();
     });
 
+    $('#reset-temperature').click(function(){
+        thermostat.resetTemperature();
+        updateTemperature();
+    });
+
     function updateTemperature() {
         $('#temperature').text(thermostat.temperature);
     };
