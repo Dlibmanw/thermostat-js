@@ -15,6 +15,12 @@ $(document).ready(function(){
         updateTemperature();
     });
 
+    $('#power-saving-mode-on').click(function(){
+        thermostat.switchPowerSaveModeOn();
+        $('#power-saving-mode-status').text('On')
+        updateTemperature();
+    });
+
     function updateTemperature() {
         $('#temperature').text(thermostat.temperature);
     };
