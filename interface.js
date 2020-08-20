@@ -29,10 +29,17 @@ $(document).ready(function(){
 
    $('#current-city').change(function(){
     var city = $('#current-city').val();
-    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=8710c8026aea53d796de4beedaf617c6&units=metric', function(data){
+    displayWeather(city);
+   })   
+
+   function displayWeather(city){
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+    var token = '&appid=8710c8026aea53d796de4beedaf617c6'
+    var units = '&units=metric'
+    $.get(url + token + units, function(data){
         $('#current-temperature').text(data.main.temp)
     });
-   })   
+   };
 
    function updateTemperature() {
         $('#temperature').text(thermostat.temperature);
