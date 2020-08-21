@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Current Temperature: <span id="current-temperature">20</span></h2>
-    <select id="current-city">
-        <option value="london">London</option>
-        <option value="paris">Paris</option>
-        <option value="new+york">New York</option>
-        <option value="tokyo">Tokyo</option>
-    </select>
-    <h1 id="temperature"></h1>
-    <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="reset-temperature">reset</button>
-        Power saving mode: <span id="power-saving-mode-status">On</span>
-        <button id="power-saving-mode-on">turn PSM on</button>
-        <button id="power-saving-mode-off">turn PSM off</button>
-    </p>
+    <div id="container">
+        <h1>Thermostat</h1>
+        <h2><span id="temperature"></span>˚C</h2>
+        <p>
+            <button id="temperature-up">+</button>
+            <button id="temperature-down">-</button>
+            <button id="reset-temperature">reset</button></br>
+            </br>
+            Power Saving Mode: <span id="power-saving-mode-status">On</span></br>
+            </br>
+            <button id="power-saving-mode-on">Turn on PSM</button>
+            <button id="power-saving-mode-off">Turn off PSM</button>
+        </p>
+    </div>
+    <div id="container">
+        <div>Choose a city:</div><br>
+        <select id="current-city">
+            <option value="london">London</option>
+            <option value="paris">Paris</option>
+            <option value="new+york">New York</option>
+            <option value="tokyo">Tokyo</option>
+        </select>
+        <h2>Current Temperature: <span id="current-temperature">20</span>˚C</h2>
+    </div>
     <script src="src/thermostat.js"></script>
     <script src="interface.js"></script>
 </body>

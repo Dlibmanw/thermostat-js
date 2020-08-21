@@ -9,3 +9,10 @@
 .high-usage {
     color: red;
 }
+
+#container {
+    background: whitesmoke;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 5%;
+  }
